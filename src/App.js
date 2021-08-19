@@ -27,14 +27,13 @@
 // ................Lecture....................
 
 import React from 'react';
-import ListClass from './lecture/day1'
-import element from "./exercises/18";
-import Welcome from "./exercises/18";
-import ListItemAlert from "./exercises/18";
+// import ListClass from './lecture/day1'
 // import List from './lecture/day2'
 // import ListFunctional from "./lecture/day2";
 
 // ...............Exercises....................
+
+import ListItemAlert from "./exercises/18";
 
 class App extends React.Component {
   render() {
