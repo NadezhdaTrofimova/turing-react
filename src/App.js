@@ -26,22 +26,23 @@
 
 // ................Lecture....................
 
-// import React from 'react';
+import React from 'react';
 // import ListClass from './lecture/day1'
 // import List from './lecture/day2'
-// import ListFunctional from "./lecture/day2";
+import ListFunctional from "./lecture/day2";
+import LoginForm from "./lecture/day3";
 
-// class App extends React.Component {
-//   render() {
-//     return (
-//         <>
-//             // eslint-disable-next-line
-//           {/*<ListClass/>*/}
-//           {/*<List/>*/}
-//           {/*<ListFunctional/>*/}
-//         </>
-//     )
-//   }
-// }
-//
-// export default App
+class App extends React.Component {
+  render() {
+    return (
+        <>
+            <LoginForm/>
+          {/*<ListClass/>*/}
+          {/*<List/>*/}
+          {/*<ListFunctional/>*/}
+        </>
+    )
+  }
+}
+
+export default App
