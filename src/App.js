@@ -26,22 +26,23 @@
 
 // ................Lecture....................
 
-// import React from 'react';
-// import ListClass from './lecture/day1'
+import React from 'react';
+import ListClass from './lecture/day1'
+import element from "./exercises/18";
+import Welcome from "./exercises/18";
+import ListItemAlert from "./exercises/18";
 // import List from './lecture/day2'
 // import ListFunctional from "./lecture/day2";
 
-// class App extends React.Component {
-//   render() {
-//     return (
-//         <>
-//             // eslint-disable-next-line
-//           {/*<ListClass/>*/}
-//           {/*<List/>*/}
-//           {/*<ListFunctional/>*/}
-//         </>
-//     )
-//   }
-// }
-//
-// export default App
+// ...............Exercises....................
+
+class App extends React.Component {
+  render() {
+    return (
+
+        <ListItemAlert/>
+    )
+  }
+}
+
+export default App
