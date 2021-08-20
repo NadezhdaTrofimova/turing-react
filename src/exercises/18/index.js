@@ -1,42 +1,36 @@
-import React from "react";
+import React, {useState} from "react";
+import './ListItemAlert.css'
 
 // 1. Выведите список элементов, каждый из которых представляет собой текст и расположенную справа от текста кнопку, при нажатии на которую выводится alert с текстом элемента.
 
 
 const ListItemAlert = () => {
 
-
-    const [text] = React.useState([
-        {id:1, value: 'First text'},
-        {id:2, value: 'Second text'},
-        {id:3, value: 'Third text'},
-        {id:4, value: 'Fourth text'},
-        {id:5, value: 'Fifth text'},
-    ])
-
-    // const handleClick = (event) => {
-    //     alert(event.currentTarget.textContent)
-    // }
-
-        return (
-            <ul>
-                {text.map}
-
-                {/*<li>first test</li>*/}
-                {/*<button onClick={handleClick}>Display text</button>*/}
-                {/*<br/>*/}
-                {/*<li>second test</li>*/}
-                {/*<button onClick={handleClick}>Display text</button>*/}
-                {/*<br/>*/}
-                {/*<li>third test</li>*/}
-                {/*<button onClick={handleClick}>Display text</button>*/}
-                {/*<br/>*/}
-                {/*<li>fourth test</li>*/}
-                {/*<button onClick={handleClick}>Display text</button>*/}
-            </ul>
-        )
+    const handleClick = (liText) => {
+        alert (liText)
     }
 
+    let liButton = <button onClick={() => handleClick(liText)} className='button'>Display text</button>;
+
+    const [liText] = React.useState(
+        [
+            ['First text', liButton],
+            ['Second text', liButton],
+            ['Third text', liButton],
+            ['Fourth text', liButton],
+            ['Fifth text', liButton]
+        ]
+    )
+
+
+    return (
+
+        <ul>
+            {liText.map(liText => (<li class='liText'>{liText}</li>))}
+        </ul>
+    )
+
+}
 
 
 export default ListItemAlert
