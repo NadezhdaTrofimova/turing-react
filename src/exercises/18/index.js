@@ -1,36 +1,36 @@
-import React, {useState} from "react";
+import React from "react";
 import './ListItemAlert.css'
 
 // 1. Выведите список элементов, каждый из которых представляет собой текст и расположенную справа от текста кнопку, при нажатии на которую выводится alert с текстом элемента.
 
-
 const ListItemAlert = () => {
 
-    const handleClick = (liText) => {
-        alert (liText)
-    }
+    let data = [
+        {text: "First text"},
+        {text: "Second text"},
+        {text: "Third text"},
+        {text: "Fourth text"},
+        {text: "Fifth text"},
+    ];
 
-    let liButton = <button onClick={() => handleClick(liText)} className='button'>Display text</button>;
-
-    const [liText] = React.useState(
-        [
-            ['First text', liButton],
-            ['Second text', liButton],
-            ['Third text', liButton],
-            ['Fourth text', liButton],
-            ['Fifth text', liButton]
-        ]
+    let li = data.map((liText) => (
+            <li>
+                <span>{liText.text}</span>
+                <button onClick={() => alert(`${liText.text}`)} className='button'>Display text</button>
+            </li>
+        )
     )
-
 
     return (
-
         <ul>
-            {liText.map(liText => (<li class='liText'>{liText}</li>))}
+            {li}
         </ul>
     )
-
 }
 
-
 export default ListItemAlert
+
+// 2. Создайте список и кнопку, по нажатию на которую будет выводиться prompt, введённый в который текст будет добавляться в список. Ключи в списка должны быть уникальными. Выполните задачу в трёх вариациях:
+// Добавление элемента в начало списка
+// Добавление элемента в конец списка
+// Добавление элемента в середину списка
