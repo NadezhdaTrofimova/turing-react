@@ -37,7 +37,7 @@ const RemoveLi = () => {
         )
     }
 
-    const handleAddLiMiddle = () => {
+    const handleRemoveLiMiddle = () => {
         setElements([
             ...elements.slice(0, Math.floor(elements.length / 2)).concat(elements.slice(Math.floor(elements.length / 2) + 1))
             ]
@@ -51,7 +51,7 @@ const RemoveLi = () => {
             </ul>
             <button className='liText' onClick={handleRemoveLiStart}>Remove from the start</button>
             <button className='liText' onClick={handleRemoveLiEnd}>Remove from the end</button>
-            <button className='liText' onClick={handleAddLiMiddle}>Remove from the middle</button>
+            <button className='liText' onClick={handleRemoveLiMiddle}>Remove from the middle</button>
         </div>
     )
 
