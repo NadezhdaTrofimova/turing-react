@@ -1,30 +1,24 @@
 
-// ................Lecture....................
-
 import React from 'react';
-// import ListClass from './lecture/day1'
-// import List from './lecture/day2'
-// import ListFunctional from "./lecture/day2";
-// import LoginForm from "./lecture/day3";
-// import Lifecycle from "./lecture/day3.2";
-// import Button from "./lecture/day3.2";
+import ListItemAlert from './exercises/18/task1'
+import AddLi from "./exercises/18/task2";
+import RemoveLi from "./exercises/18/task3";
 
-// .............course ..............
-
-import Ap from './course/index'
 
 class App extends React.Component {
-  render() {
-    return (
-        <>
-            <Ap/>
-            {/*<Lifecycle/>*/}
-          {/*<ListClass/>*/}
-          {/*<List/>*/}
-          {/*<ListFunctional/>*/}
-        </>
-    )
-  }
+    render() {
+        return (
+            <div>
+                <h1>1</h1>
+                <ListItemAlert/>
+                <h1>2</h1>
+                <AddLi/>
+                <h1>3</h1>
+                <RemoveLi/>
+            </div>
+        )
+    }
 }
+
 
 export default App
