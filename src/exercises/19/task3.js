@@ -15,12 +15,18 @@ const SumInInputs = () => {
 
     return (
         <div>
-            <input onChange={event => setValue1(event.target.value)} value={value1}/>
+            <input
+                onChange={event => setValue1(event.target.value)}
+                value={value1}
+            />
             <span>+</span>
-            <input onChange={event => setValue2(event.target.value)} value={value2}/>
-            <button onClick={handleSumInInputs}>=</button>
+            <input
+                onChange={event => setValue2(event.target.value)}
+                value={value2}
+            />
+                <button onClick={handleSumInInputs}>=</button>
         </div>
-    );
+);
 }
 
 export default SumInInputs

@@ -4,7 +4,7 @@ import React, {useState} from 'react';
 
 const CountSymbols = () => {
 
-    const [value, setValue] = React.useState({value: ''})
+    const [value, setValue] = React.useState('')
 
     const handleSymbolsCount = () => {
         alert (value.length)
