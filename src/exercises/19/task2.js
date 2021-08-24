@@ -4,15 +4,16 @@ import React, {useState} from 'react';
 
 const CountSymbols = () => {
 
-    const [value, setValue] = useState({value: ''})
+    const [value, setValue] = React.useState({value: ''})
 
     const handleSymbolsCount = () => {
         alert (value.length)
+        setValue('')
     }
 
     return(
         <div>
-            <input onChange={event => setValue(event.target.value)}/>
+            <input onChange={event => setValue(event.target.value)} value={value}/>
             <button onClick={handleSymbolsCount}>Count symbols</button>
         </div>
     );

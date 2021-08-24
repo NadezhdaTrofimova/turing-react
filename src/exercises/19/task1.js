@@ -4,7 +4,7 @@ import React, {useState} from 'react';
 
 function DoubleText() {
 
-    const [value, setValue] = useState('Введите текст')
+    const [value, setValue] = React.useState('Введите текст')
 
     return(
         <div>
