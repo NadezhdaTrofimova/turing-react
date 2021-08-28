@@ -4,6 +4,7 @@ import DoubleText from "./exercises/19/task1";
 import CountSymbols from "./exercises/19/task2";
 import SumInInputs from "./exercises/19/task3";
 import AddString from "./exercises/19/task4";
+import RemoveString from "./exercises/19/task5";
 
 class App extends React.Component {
   render() {
@@ -17,6 +18,8 @@ class App extends React.Component {
             <SumInInputs/>
             <h1>4</h1>
             <AddString/>
+            <h1>5</h1>
+            <RemoveString/>
         </>
     )
   }
