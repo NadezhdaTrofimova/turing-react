@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 
 // 1. Создайте на странице textarea и абзац. Выводите всё, что пользователь вводит в textarea в абзац.
 
@@ -8,7 +8,7 @@ function DoubleText() {
 
     return(
         <div>
-            <textarea onChange = {event => setValue(event.target.value)}>{value}</textarea>
+            <textarea value={value} onChange = {event => setValue(event.target.value)}/>
             <p>{value}</p>
         </div>
     );

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 
 // 2. Создайте инпут и кнопку. Пусть при нажатии на кнопку выводится alert с данными о количестве введённых символов
 
