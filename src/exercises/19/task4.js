@@ -29,7 +29,7 @@ const AddString = () => {
                 <button>Add string</button>
             </form>
             <ol>
-                {stringLi.map((liStr) => (<li>{liStr.string}</li>))}
+                {stringLi.map((liStr) => (<li key={stringLi.id}>{liStr.string}</li>))}
             </ol>
         </>
     );

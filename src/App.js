@@ -5,6 +5,7 @@ import CountSymbols from "./exercises/19/task2";
 import SumInInputs from "./exercises/19/task3";
 import AddString from "./exercises/19/task4";
 import RemoveString from "./exercises/19/task5";
+import ValidForm from "./exercises/19/task6";
 
 class App extends React.Component {
   render() {
@@ -20,6 +21,9 @@ class App extends React.Component {
             <AddString/>
             <h1>5</h1>
             <RemoveString/>
+            <h1>6</h1>
+            <ValidForm/>
+
         </>
     )
   }
