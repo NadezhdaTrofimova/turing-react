@@ -6,6 +6,7 @@ import SumInInputs from "./exercises/19/task3";
 import AddString from "./exercises/19/task4";
 import RemoveString from "./exercises/19/task5";
 import ValidForm from "./exercises/19/task6";
+import CreateSquare from "./exercises/19/task7";
 
 class App extends React.Component {
   render() {
@@ -23,7 +24,8 @@ class App extends React.Component {
             <RemoveString/>
             <h1>6</h1>
             <ValidForm/>
-
+            <h1>7</h1>
+            <CreateSquare/>
         </>
     )
   }
