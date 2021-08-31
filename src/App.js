@@ -3,6 +3,7 @@ import './../src/exercises/21/styles.css'
 import Image from "./exercises/21/task1";
 import Button from "./exercises/21/task2";
 import Header from "./exercises/21/task3";
+import Link from "./exercises/21/task4";
 
 
 class App extends React.Component {
@@ -15,6 +16,8 @@ class App extends React.Component {
                 <Button text='click me' onClick={()=>alert('Success')}/>
                 <h1>3</h1>
                 <Header text='Header' color={'red'}/>
+                <h1>4</h1>
+                <Link href='https://www.google.ru/' text='GOOGLE' isUnderlined={false}/>
             </div>
         )
     }
