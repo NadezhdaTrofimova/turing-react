@@ -7,6 +7,7 @@ import AddString from "./exercises/19/task4";
 import RemoveString from "./exercises/19/task5";
 import ValidForm from "./exercises/19/task6";
 import CreateSquare from "./exercises/19/task7";
+import ChoiceOfTextSize from "./exercises/19/task8";
 
 class App extends React.Component {
   render() {
@@ -26,6 +27,8 @@ class App extends React.Component {
             <ValidForm/>
             <h1>7</h1>
             <CreateSquare/>
+            <h1>8</h1>
+            <ChoiceOfTextSize/>
         </>
     )
   }
