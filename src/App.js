@@ -1,8 +1,6 @@
-
 import React from 'react';
-import ListItemAlert from './exercises/18/task1'
-import AddLi from "./exercises/18/task2";
-import RemoveLi from "./exercises/18/task3";
+import Image from "./exercises/21/task1";
+import './../src/exercises/21/styles.css'
 
 
 class App extends React.Component {
@@ -10,11 +8,7 @@ class App extends React.Component {
         return (
             <div>
                 <h1>1</h1>
-                <ListItemAlert/>
-                <h1>2</h1>
-                <AddLi/>
-                <h1>3</h1>
-                <RemoveLi/>
+                <Image src='https://cs.pikabu.ru/post_img/2013/06/17/7/1371462635_257603021.jpg' height={100} width={120}/>
             </div>
         )
     }
