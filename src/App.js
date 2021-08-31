@@ -1,3 +1,4 @@
+
 import React from "react";
 import './App.css'
 import DoubleText from "./exercises/19/task1";
@@ -36,6 +37,8 @@ class App extends React.Component {
         </>
     )
   }
+
 }
+
 
 export default App
