@@ -1,3 +1,4 @@
+
 import React from 'react';
 import './../src/exercises/21/styles.css'
 import Image from "./exercises/21/task1";
@@ -35,6 +36,7 @@ class App extends React.Component {
             </div>
         )
     }
+
 }
 
 
