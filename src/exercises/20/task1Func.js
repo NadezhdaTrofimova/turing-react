@@ -5,17 +5,17 @@ import React, {useRef} from "react";
 
 const FocusToInputFunctional = () => {
 
-    const textInput = useRef('')
+    const input = useRef('')
 
     function handleClick() {
-        textInput.current.focus();
+        input.current.focus();
     }
 
     return (
         <div>
             <input
                 type="text"
-                ref={textInput}/>
+                ref={input}/>
             <button onClick={handleClick}>
                 Focus
             </button>

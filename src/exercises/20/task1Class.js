@@ -5,11 +5,16 @@ import React from "react";
 
 class FocusToInputClass extends React.Component {
 
+    constructor(props) {
+        super(props);
+        this.input = React.createRef();
+    }
+
     render() {
         return (
             <div>
-                <input ref={(input) => this.input = input}/>
-                <button onClick={() => {this.input.focus()}}>
+                <input ref={this.input}/>
+                <button onClick={() => {this.input.current.focus()}}>
                     Focus
                 </button>
             </div>
