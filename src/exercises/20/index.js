@@ -6,6 +6,8 @@ import BlurToInputFunctional from "./task2Func";
 import BlurToInputClass from "./task2Class";
 import DifferentSizeFunctional from "./task3Func";
 import DifferentSizeClass from "./task3Class";
+import ScrollToBottomFunctional from "./task4Func";
+import ScrollToBottomClass from "./task4Class";
 
 const Main = () => {
 
@@ -21,6 +23,8 @@ const Main = () => {
             <DifferentSizeFunctional/>
             <DifferentSizeClass/>
             <h1>4</h1>
+            <ScrollToBottomFunctional/>
+            <ScrollToBottomClass/>
         </div>
     )
 }
