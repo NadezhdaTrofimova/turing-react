@@ -1,9 +1,11 @@
 import React from "react";
-import './style.css'
+import './style.module.css'
 import FocusToInputFunctional from "./task1Func";
 import FocusToInputClass from "./task1Class";
 import BlurToInputFunctional from "./task2Func";
 import BlurToInputClass from "./task2Class";
+import DifferentSizeFunctional from "./task3Func";
+import DifferentSizeClass from "./task3Class";
 
 const Main = () => {
 
@@ -16,6 +18,8 @@ const Main = () => {
             <BlurToInputFunctional/>
             <BlurToInputClass/>
             <h1>3</h1>
+            <DifferentSizeFunctional/>
+            <DifferentSizeClass/>
             <h1>4</h1>
         </div>
     )

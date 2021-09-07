@@ -1,20 +1,20 @@
 // 2. В предыдущей задаче добавьте инпуту следующую логику: при вводе в него текста “Hello world!” инпут должен блюриться(blur()). Задачу выполните в двух вариациях: на функциональных компонентах и на классовых.
 
-import React, {useRef, useState} from "react";
+import React from "react";
 
 
 const BlurToInputFunctional = () => {
 
-    const [text, setText] = useState('')
-    const input = useRef('')
+    const [text, setText] = React.useState('')
+    const inputRef = React.createRef()
 
     const handleClick = () => {
-        input.current.focus();
+        inputRef.current.focus();
     }
 
     const handleOnChange = (event) => {
         if (event.target.value === 'Hello world!') {
-            input.current.blur()
+            inputRef.current.blur()
         }
         setText(event.target.value)
     }
@@ -25,7 +25,7 @@ const BlurToInputFunctional = () => {
             <input
                 type="text"
                 value={text}
-                ref={input}
+                ref={inputRef}
                 onChange={handleOnChange}
             />
             <button onClick={handleClick}>

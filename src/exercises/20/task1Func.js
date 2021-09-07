@@ -1,21 +1,21 @@
 // 1. Вывести на страницу инпут и кнопку. По нажатию на кнопку инпут должен оказываться в фокусе. Задачу выполните в двух вариациях: на функциональных компонентах и на классовых.
 
-import React, {useRef} from "react";
+import React from "react";
 
 
 const FocusToInputFunctional = () => {
 
-    const input = useRef('')
+    const inputRef = React.createRef()
 
     function handleClick() {
-        input.current.focus();
+        inputRef.current.focus();
     }
 
     return (
         <div>
             <input
                 type="text"
-                ref={input}/>
+                ref={inputRef}/>
             <button onClick={handleClick}>
                 Focus
             </button>

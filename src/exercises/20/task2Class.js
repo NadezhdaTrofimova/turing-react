@@ -7,7 +7,7 @@ class BlurToInputClass extends React.Component {
 
     constructor(props) {
         super(props);
-        this.input = React.createRef();
+        this.inputRef = React.createRef();
     }
 
     state = {
@@ -16,7 +16,7 @@ class BlurToInputClass extends React.Component {
 
     handleOnChange = (event) => {
         if (event.target.value === 'Hello world!') {
-            this.input.current.blur()
+            this.inputRef.current.blur()
         }
         this.setState({text: event.target.value})
     }
@@ -25,11 +25,11 @@ class BlurToInputClass extends React.Component {
     render() {
         return (
             <div>
-                <input ref={this.input}
-                       onChange={this.handleOnChange}/>
-                <button onClick={() => {
-                    this.input.current.focus()
-                }}>
+                <input
+                    ref={this.inputRef}
+                    onChange={this.handleOnChange}/>
+                <button
+                    onClick={() => {this.inputRef.current.focus()}}>
                     Focus
                 </button>
             </div>
