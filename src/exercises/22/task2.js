@@ -1,19 +1,23 @@
+// 2. Дополните код loadUser таким образом, чтобы загружался пользователь с определенным ID. Ссылкка для загрузки пользователя: https://jsonplaceholder.typicode.com/users/:id, где вместо :id подставляется число - собственно ID самого пользователя. Например, загрузка пользоваателя с ID 9 соответствует ссылке https://jsonplaceholder.typicode.com/users/9. Структуру ответа (и будущих данных) можно посмотреть, перейдя по последней ссылке в этом упражнении. Для загрузки данных следует использовать метод GET.  Выведите данные о  пользователе: имя, юзернэйм, номер телефона, веб-сайт и наименование компании, в котором работает данный пользователь.
+
 import React from "react";
 
+const User = () => {
 
-const App = () => {
-
+    const [user, setUser] = React.useState([]);
     const [error, setError] = React.useState(null);
     const [isLoaded, setIsLoaded] = React.useState(false);
-    const [todo, setTodo] = React.useState([]);
+    const [value, setValue] = React.useState('')
+    const [id, setId] = React.useState(1)
 
-    const loadTodo = () => {
-        fetch("https://jsonplaceholder.typicode.com/todos")
+
+    const loadUser = (id) => {
+        fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
             .then(res => res.json())
             .then(
                 (result) => {
                     setIsLoaded(true);
-                    setTodo(result);
+                    setUser(result);
                 },
                 (error) => {
                     setIsLoaded(true);
@@ -23,8 +27,17 @@ const App = () => {
     }
 
     React.useEffect(() => {
-        loadTodo();
-    }, [])
+        loadUser(id);
+    }, [id])
+
+    const handleChange = (event) => {
+        setValue(event.target.value)
+    }
+
+    const handleButtonClick = (event) => {
+        event.preventDefault()
+        setId(parseInt(value))
+    }
 
 
     if (error) {
@@ -33,25 +46,19 @@ const App = () => {
         return <div>Загрузка...</div>;
     } else {
         return (
-            <table>
-                <thead>
-                <th>N</th>
-                <th>User</th>
-                <th>Todo title</th>
-                <th>Completed</th>
-
-                </thead>
-                {todo.map(todo => (
-                    <tr key={todo.id}>
-                        <td>{todo.id}</td>
-                        <td>{todo.userId}</td>
-                        <td>{todo.title}</td>
-                        <td>{todo.completed ? '+' : '-'}</td>
-                    </tr>
-                ))}
-            </table>
-        );
+            <>
+                <input onChange={handleChange} value={value}/>
+                <button onClick={handleButtonClick}>Введите id (1 - 10)</button>
+                <div>
+                    <div className='user-container'><h1>Имя :</h1><h2>{user.name}</h2></div>
+                    <div className='user-container'><h1>Юзернэйм :</h1><h2>{user.username}</h2></div>
+                    <div className='user-container'><h1>Номер телефона :</h1><h2>{user.phone}</h2></div>
+                    <div className='user-container'><h1>Веб-сайт :</h1><h2>{user.website}</h2></div>
+                    <div className='user-container'><h1>Наименование компании :</h1><h2>{user.company.name}</h2></div> // Этот запрос к имени компании срабатывает не всегда. Пишет ошибку: 'TypeError: Cannot read properties of undefined (reading 'name')' .  Не понимаю почему.
+                </div>
+            </>
+        )
     }
 }
 
-export default App
+export default User

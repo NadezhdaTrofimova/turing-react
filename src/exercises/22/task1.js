@@ -1,29 +1,5 @@
-/* Упражнение 1:
-    Есть заготовка для компонента App:
-    import { useEffect } from 'react'
+// 1 . Дополните код loadTodo таким образом, чтобы данные загружались по ссылке https://jsonplaceholder.typicode.com/todos. Для загрузки используйте HTTP метод GET. Ответ на запрос и структуру можно посмотреть, перейдя по приведенной ссылке в браузере.
 
-const App = () => {
-    // Обязательно нужно создать стэйт
-    const [todo, setTodo] = useState([])
-
-    // Функция, которая загружает todo list
-    const loadTodo = () => {
-        // Напишите код, который загружает данные с сервера
-    }
-
-    // Поскольку загрузка - побочный эффект, загрузку выполняем
-    // в useEffect
-    useEffect(() => {
-        loadTodo();
-    }, [])
-
-    return (
-        // Напишите функцию рендера
-    )
-}
-
-Дополните код loadTodo таким образом, чтобы данные загружались по ссылке https://jsonplaceholder.typicode.com/todos. Для загрузки используйте HTTP метод GET. Ответ на запрос и структуру можно посмотреть, перейдя по приведенной ссылке в браузере.
-*/
 
 import React from "react";
 
@@ -62,12 +38,14 @@ const App = () => {
         return (
             <table>
                 <thead>
-                <th>N</th>
-                <th>User</th>
-                <th>Todo title</th>
-                <th>Completed</th>
-
+                <tr>
+                    <th>N</th>
+                    <th>User</th>
+                    <th>Todo title</th>
+                    <th>Completed</th>
+                </tr>
                 </thead>
+                <tbody>
                 {todo.map(todo => (
                     <tr key={todo.id}>
                         <td>{todo.id}</td>
@@ -76,6 +54,7 @@ const App = () => {
                         <td>{todo.completed ? '+' : '-'}</td>
                     </tr>
                 ))}
+                </tbody>
             </table>
         );
     }
