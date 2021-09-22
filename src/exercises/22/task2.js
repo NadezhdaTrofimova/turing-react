@@ -4,7 +4,7 @@ import React from "react";
 
 const User = () => {
 
-    const [user, setUser] = React.useState([]);
+    const [user, setUser] = React.useState({});
     const [error, setError] = React.useState(null);
     const [isLoaded, setIsLoaded] = React.useState(false);
     const [value, setValue] = React.useState('')
@@ -54,7 +54,9 @@ const User = () => {
                     <div className='user-container'><h1>Юзернэйм :</h1><h2>{user.username}</h2></div>
                     <div className='user-container'><h1>Номер телефона :</h1><h2>{user.phone}</h2></div>
                     <div className='user-container'><h1>Веб-сайт :</h1><h2>{user.website}</h2></div>
-                    <div className='user-container'><h1>Наименование компании :</h1><h2>{user.company.name}</h2></div> // Этот запрос к имени компании срабатывает не всегда. Пишет ошибку: 'TypeError: Cannot read properties of undefined (reading 'name')' .  Не понимаю почему.
+                    {(user.company) ?
+                    <div className='user-container'><h1>Наименование компании :</h1><h2>{user.company.name}</h2></div> :
+                    <div className='user-container'><h1>Наименование компании :</h1><h2>Неизвестно</h2></div>}
                 </div>
             </>
         )
