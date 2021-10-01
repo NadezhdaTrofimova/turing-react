@@ -1,5 +1,5 @@
 import React from 'react';
-import Main from "./exercises/20";
+import Main from "./exercises/22";
 
 
 class App extends React.Component {
